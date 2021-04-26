@@ -1,7 +1,18 @@
-<div>
+<div class="container">
+  <div id="tracks-heading">
+    <h2>Title</h2>
+    <h2>Listen</h2>
+  </div>
   {{#each tracks}}
-  <p>{{name}}</p>
-  <audio src={{preview_url}}>Play</audio>
+  <div id="play-track">
+    <p>{{name}}</p>
+    <audio controls>
+      <source src="{{preview_url}}" type="">
+      Play
+    </audio>
+  </div>
+  
+  
 
   {{/each}}
 </div>
